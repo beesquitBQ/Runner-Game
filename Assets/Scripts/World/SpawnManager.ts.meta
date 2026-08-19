@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/fd7a6e90-e058-4827-836a-1bdadacd5ed7>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 24e2eab9-2506-4c23-9d3c-c22cd6d71ec3
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 24e2eab9-2506-4c23-9d3c-c22cd6d71ec3
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5e69dcd4-1365-4fd9-b6c0-20b12e35b97a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5e69dcd4-1365-4fd9-b6c0-20b12e35b97a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 9b87c9c9-1bfb-422d-8bdf-0d13d1b8776b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    coins: false
+    laneWidth: false
+    largeObstacles: false
+    rowDistance: false
+    smallObstacles: false
+    spawnZ: false
+    trampolines: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - smallObstacles: !<MappingBased.AssignableType_1[]>
+        []
+      largeObstacles: !<MappingBased.AssignableType_2[]>
+        []
+      coins: !<MappingBased.AssignableType_3[]>
+        []
+      trampolines: !<MappingBased.AssignableType_4[]>
+        []
+      spawnZ: !<float> 200.000000
+      laneWidth: !<float> 20.000000
+      rowDistance: !<float> 30.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input AssignableType_1[] smallObstacles"
+    - "// @input AssignableType_2[] largeObstacles"
+    - "// @input AssignableType_3[] coins"
+    - "// @input AssignableType_4[] trampolines"
+    - // @input float spawnZ = 220
+    - // @input float laneWidth = 20
+    - // @input float rowDistance = 30

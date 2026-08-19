@@ -1,0 +1,73 @@
+- !<AssetImportMetadata/c2d25ff0-1ce3-414b-adca-a1a305fac699>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 5c8c30ed-b3db-4cba-a418-998382f2262f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 5c8c30ed-b3db-4cba-a418-998382f2262f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> bf127a6c-b47a-42f1-81a5-20bf7306d926
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/bf127a6c-b47a-42f1-81a5-20bf7306d926>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 3b98ec92-6126-49d4-92c5-95e8a23e11d3
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bgmAudio: false
+    coinAudio: false
+    coinsText: false
+    comboText: false
+    gameOverAudio: false
+    gameOverUI: false
+    hitAudio: false
+    livesText: false
+    scoreText: false
+    tapToStartUI: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - scoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      coinsText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      livesText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      comboText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      gameOverUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tapToStartUI: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      bgmAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      coinAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      hitAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      gameOverAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.Text scoreText
+    - // @input Component.Text coinsText
+    - // @input Component.Text livesText
+    - // @input Component.Text comboText
+    - // @input SceneObject gameOverUI
+    - // @input SceneObject tapToStartUI
+    - // @input Component.AudioComponent bgmAudio
+    - // @input Component.AudioComponent coinAudio
+    - // @input Component.AudioComponent hitAudio
+    - // @input Component.AudioComponent gameOverAudio

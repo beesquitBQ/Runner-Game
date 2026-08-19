@@ -1,0 +1,82 @@
+- !<AssetImportMetadata/1b025871-1c57-4d04-a80f-b873518f8e89>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a45cffea-483f-48a0-9d8d-7eac2bcb29f9
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a45cffea-483f-48a0-9d8d-7eac2bcb29f9
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dfd53ce2-3d63-4d1c-9463-3f2396a0781b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dfd53ce2-3d63-4d1c-9463-3f2396a0781b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: e2927654-03fc-4f09-8e32-f24310452d81
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    animController: false
+    boostedForwardDistance: false
+    boostedJumpDuration: false
+    boostedJumpHeight: false
+    characterVisualMesh: false
+    invulnerabilityDuration: false
+    jumpDuration: false
+    jumpForwardDistance: false
+    jumpHeight: false
+    landingGraceDuration: false
+    laneSmoothness: false
+    laneWidth: false
+    tiltAngle: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - animController: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      laneWidth: !<float> 20.000000
+      laneSmoothness: !<float> 10.000000
+      tiltAngle: !<float> 8.000000
+      jumpHeight: !<float> 25.000000
+      jumpDuration: 0.550000
+      jumpForwardDistance: !<float> 20.000000
+      boostedJumpHeight: !<float> 45.000000
+      boostedJumpDuration: 0.800000
+      boostedForwardDistance: !<float> 40.000000
+      landingGraceDuration: 0.350000
+      invulnerabilityDuration: 1.200000
+      characterVisualMesh: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType_1 animController
+    - // @input float laneWidth = 20
+    - // @input float laneSmoothness = 10
+    - // @input float tiltAngle = 8
+    - // @input float jumpHeight = 30
+    - // @input float jumpDuration = 0.68
+    - // @input float jumpForwardDistance = 20
+    - // @input float boostedJumpHeight = 65
+    - // @input float boostedJumpDuration = 1.35
+    - // @input float boostedForwardDistance = 40
+    - // @input float landingGraceDuration = 0.35
+    - // @input float invulnerabilityDuration = 1.2
+    - // @input SceneObject characterVisualMesh

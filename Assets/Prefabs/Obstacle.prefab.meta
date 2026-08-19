@@ -1,0 +1,111 @@
+- !<AssetImportMetadata/d3cd3328-b7ec-4eca-9841-4cdd2f496aec>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> fa377d18-1ee1-4266-ba4f-17ed189d91cc
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> fa377d18-1ee1-4266-ba4f-17ed189d91cc
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 6c1f2a57-834c-4808-8891-d8dc4e07922a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ColliderComponent/035a4d50-fc85-443a-6c76-b04a81016bff>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Cylinder>
+    Axis: Y
+    Length: 0.700000
+    Radius: 0.130000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 0.000000
+  RotationTension: 0.000000
+  ForceCompound: false
+  Intangible: true
+  ShowCollider: true
+- !<SceneObject/0afee45c-c205-4eeb-4449-c144760fe978>
+  PrefabRemaps:
+    []
+  Name: Box
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 10.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 32.000000, y: 23.703712, z: 31.999987}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> cefa1822-2641-4409-7a3e-52a8cc235676
+    - !<own> 035a4d50-fc85-443a-6c76-b04a81016bff
+- !<ScriptComponent/5cded155-d5ea-4552-a9b3-4b6bf51c2514>
+  PrefabRemaps:
+    []
+  Name: Obstacle
+  Enabled: true
+  ScriptAsset: !<reference> cbef374b-172c-444c-ae5d-e8cff92f7f25
+  ScriptInputsDefault:
+    recycleZ: true
+    obstacleHeight: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      kind: Small
+      recycleZ: !<float> -20.000000
+      obstacleHeight: !<float> 18.000000
+      depthZ: !<float> 10.000000
+  ScriptTypes:
+    "":
+      {}
+- !<ObjectPrefabAssetData/6c1f2a57-834c-4808-8891-d8dc4e07922a>
+  Prototype: !<ObjectOwner/80715548-7ae3-4185-ac0b-cce9ac88316c>
+    PackagePath: ""
+    objects:
+      - !<own> bf51e68d-22c6-4613-46f0-8d0d0b605c6c
+- !<SceneObject/bf51e68d-22c6-4613-46f0-8d0d0b605c6c>
+  PrefabRemaps:
+    []
+  Name: Obstacle
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 0afee45c-c205-4eeb-4449-c144760fe978
+  Components:
+    - !<own> 5cded155-d5ea-4552-a9b3-4b6bf51c2514
+- !<RenderMeshVisual/cefa1822-2641-4409-7a3e-52a8cc235676>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b4eb80a8-ccb0-415f-b353-d0bcabd38e72
+  Mesh: !<reference> 9cd292fe-6043-4e6f-9cc3-a754aa4c3dd3
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

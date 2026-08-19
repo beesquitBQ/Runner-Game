@@ -1,0 +1,70 @@
+- !<AssetImportMetadata/14c4aaf3-6717-45eb-850a-82b9e9f7dbf6>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 70821bb2-e313-4cbe-86b3-7eff6b3dc039
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 70821bb2-e313-4cbe-86b3-7eff6b3dc039
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ead95624-c61e-41f1-937e-5d83a434ea12
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ead95624-c61e-41f1-937e-5d83a434ea12>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: fdef7377-38d7-4548-a12e-645afa01ec8d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    deadLoopClipName: false
+    deathAnimDuration: false
+    deathClipName: false
+    getupAnimDuration: false
+    getupClipName: false
+    idleClipName: false
+    jumpClipName: false
+    runClipName: false
+    targetAnimationComponent: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - targetAnimationComponent: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      idleClipName: idle
+      runClipName: run
+      jumpClipName: jump
+      deathClipName: death
+      deadLoopClipName: dead_loop
+      getupClipName: getup
+      deathAnimDuration: 1.500000
+      getupAnimDuration: 1.200000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.Component targetAnimationComponent
+    - '// @input string idleClipName = "Idle"'
+    - '// @input string runClipName = "Run"'
+    - '// @input string jumpClipName = "Jump"'
+    - '// @input string deathClipName = "Death"'
+    - '// @input string deadLoopClipName = "DeadLoop"'
+    - '// @input string getupClipName = "Getup"'
+    - // @input float deathAnimDuration = 1.3
+    - // @input float getupAnimDuration = 1.1

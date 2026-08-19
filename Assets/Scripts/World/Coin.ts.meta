@@ -1,0 +1,52 @@
+- !<AssetImportMetadata/e58a7938-6ff1-478e-b220-a168baab54df>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 27acf594-af56-4923-9620-579206661dfe
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 27acf594-af56-4923-9620-579206661dfe
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> bfe08f2b-c450-4b09-a751-2b0c55c40845
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/bfe08f2b-c450-4b09-a751-2b0c55c40845>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 526678c5-269c-4a37-a5ea-8b8e84a2d20b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    laneIndex: false
+    recycleZ: false
+    visuals: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - visuals: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      recycleZ: !<float> -20.000000
+      laneIndex: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject visuals
+    - // @input float recycleZ = -40
+    - // @input float laneIndex = 1

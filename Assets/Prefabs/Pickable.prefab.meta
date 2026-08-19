@@ -1,0 +1,166 @@
+- !<AssetImportMetadata/6bd69a5b-3987-44cb-b52b-0d4f11876ffc>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 21b10b3e-4e35-45f6-9101-aae4ca2a9af8
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 21b10b3e-4e35-45f6-9101-aae4ca2a9af8
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> b16f2f6e-9e1b-4dfe-a223-66c0b6352786
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/19a71a85-b754-4600-4bbc-12e612910cf6>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 62430a31-98c0-40c9-99a5-45a10dec1113
+  Mesh: !<reference> 016e6517-a854-43c8-9d6c-e4fa13b646bf
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/24463170-94b3-4487-7773-20ce6e955d55>
+  PrefabRemaps:
+    []
+  Name: Object 0
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d601313b-b844-4736-6a65-bbf8fdb34b7f
+- !<ScriptComponent/4166f16b-f6e2-4298-8c70-c6f9be19445a>
+  PrefabRemaps:
+    []
+  Name: Coin
+  Enabled: true
+  ScriptAsset: !<reference> 27acf594-af56-4923-9620-579206661dfe
+  ScriptInputsDefault:
+    recycleZ: true
+    laneIndex: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      visuals: !<reference.SceneObject> eba16d83-43f5-4ab8-7147-3310df59f3f2
+      recycleZ: !<float> -20.000000
+      laneIndex: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/5a09de0e-3a93-42cb-4840-9b77a0823a47>
+  PrefabRemaps:
+    []
+  Name: Cylinder
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 10.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 15.000000, y: 15.000000, z: 15.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 19a71a85-b754-4600-4bbc-12e612910cf6
+    - !<own> e2d7e5bd-8f44-4761-5298-b5ce75d9881b
+- !<ObjectPrefabAssetData/b16f2f6e-9e1b-4dfe-a223-66c0b6352786>
+  Prototype: !<ObjectOwner/6c1663ac-10d6-464b-92c0-c151c3d061e2>
+    PackagePath: ""
+    objects:
+      - !<own> eba16d83-43f5-4ab8-7147-3310df59f3f2
+- !<ScriptComponent/d601313b-b844-4736-6a65-bbf8fdb34b7f>
+  PrefabRemaps:
+    []
+  Name: TweenTransform
+  Enabled: true
+  ScriptAsset: !<reference> c0359509-9eb1-4630-b6c4-e6f477d226ba
+  ScriptInputsDefault:
+    playAutomatically: true
+    startInput: true
+    endInput: true
+    from: true
+    to: true
+    additive: true
+    time: true
+    delay: true
+    isLocal: true
+    easingType: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      sceneObjectReference: !<reference.SceneObject> eba16d83-43f5-4ab8-7147-3310df59f3f2
+      tweenName: RotateCoin
+      playAutomatically: true
+      loopType: 1
+      type: 2
+      movementType: 3
+      startInput: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      endInput: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      from: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      to: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      offset: !<Vec3> {x: 0.000000, y: 180.000000, z: 0.000000}
+      additive: false
+      time: !<float> 1.000000
+      delay: !<float> 0.000000
+      isLocal: true
+      easingFunction: Linear
+      easingType: Out
+  ScriptTypes:
+    "":
+      {}
+- !<ColliderComponent/e2d7e5bd-8f44-4761-5298-b5ce75d9881b>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Sphere>
+    FitVisual: false
+    Radius: 1.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 0.000000
+  RotationTension: 0.000000
+  ForceCompound: false
+  Intangible: true
+  ShowCollider: false
+- !<SceneObject/eba16d83-43f5-4ab8-7147-3310df59f3f2>
+  PrefabRemaps:
+    []
+  Name: Pickable
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 5a09de0e-3a93-42cb-4840-9b77a0823a47
+    - !<own> 24463170-94b3-4487-7773-20ce6e955d55
+  Components:
+    - !<own> 4166f16b-f6e2-4298-8c70-c6f9be19445a

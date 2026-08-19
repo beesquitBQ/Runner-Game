@@ -1,0 +1,55 @@
+- !<AssetImportMetadata/5453dade-78bb-4a80-b1c9-f1144f77c8be>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> cbef374b-172c-444c-ae5d-e8cff92f7f25
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> cbef374b-172c-444c-ae5d-e8cff92f7f25
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 590bbb81-9d36-4eae-a71b-8c7963e61496
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/590bbb81-9d36-4eae-a71b-8c7963e61496>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 20e7a114-2f25-4cb6-b455-383200b1c9d9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    depthZ: false
+    kind: false
+    obstacleHeight: false
+    recycleZ: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - kind: ""
+      recycleZ: !<float> -20.000000
+      obstacleHeight: !<float> 18.000000
+      depthZ: !<float> 15.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input string kind
+    - // @input float recycleZ = -40
+    - // @input float obstacleHeight = 18
+    - // @input float depthZ = 14

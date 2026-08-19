@@ -1,0 +1,136 @@
+- !<ObjectPrefab/27d2994f-4805-4467-a073-3fae505462e1>
+  PackagePath: ""
+  objects:
+    - !<own> e7f6736e-d165-4a1b-a13e-2a8aea36d1c5
+  LazyLoading: false
+  RetainAssets: true
+  PreviewEnvironment: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/244e02c5-1488-4a6d-b4c3-a34bf79776f3>
+  PrefabRemaps:
+    []
+  Name: Box 1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 1.106936, z: -3.504765}
+    Rotation: {x: 34.348686, y: -0.000000, z: 0.000000}
+    Scale: {x: 10.000000, y: 6.401349, z: 5.108487}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4a9a1ebf-4a0f-4ff8-a204-afb7401b3799
+- !<RenderMeshVisual/307f936a-cd70-4ec9-9211-7c53ffe1aadd>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> a38d55c9-ef7f-4af5-a2eb-f5032bc95f6c
+  Mesh: !<reference> 1bb09fec-e614-41ae-910b-8bd6500d332b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/430f5f32-ddde-499c-866f-2d72700a90fe>
+  PrefabRemaps:
+    []
+  Name: Trampoline
+  Enabled: true
+  ScriptAsset: !<reference> bcbd5a70-64f8-44e2-8406-410cc6d4041d
+  ScriptInputsDefault:
+    recycleZ: true
+    depthZ: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      recycleZ: !<float> -20.000000
+      depthZ: !<float> 15.000000
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/4a9a1ebf-4a0f-4ff8-a204-afb7401b3799>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 6609b76f-c136-4b28-909a-dd659df68501
+  Mesh: !<reference> 1bb09fec-e614-41ae-910b-8bd6500d332b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ColliderComponent/a66ec6c5-f425-4fdc-8aed-b241ad4f5e34>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Box>
+    FitVisual: true
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: true
+  ShowCollider: false
+- !<SceneObject/bece7402-45a6-4d61-a414-02cbcdc4a804>
+  PrefabRemaps:
+    []
+  Name: Box
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 2.421253, z: 0.000000}
+    Rotation: {x: 34.228748, y: -0.000000, z: 0.000000}
+    Scale: {x: 10.000000, y: 0.897534, z: 10.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 307f936a-cd70-4ec9-9211-7c53ffe1aadd
+    - !<own> a66ec6c5-f425-4fdc-8aed-b241ad4f5e34
+- !<SceneObject/e7f6736e-d165-4a1b-a13e-2a8aea36d1c5>
+  PrefabRemaps:
+    - 244e02c5-1488-4a6d-b4c3-a34bf79776f3: 244e02c5-1488-4a6d-4b3c-5cb40868890c
+    - 307f936a-cd70-4ec9-9211-7c53ffe1aadd: 307f936a-cd70-4ec9-6dee-83ac001e5522
+    - 430f5f32-ddde-499c-866f-2d72700a90fe: b720c647-05ac-4bea-8c7f-7758009cdc0e
+    - 4a9a1ebf-4a0f-4ff8-a204-afb7401b3799: 4a9a1ebf-4a0f-4ff8-5dfb-5048bfe4c866
+    - a66ec6c5-f425-4fdc-8aed-b241ad4f5e34: d5eaa260-f4ec-421a-aaba-4045ac8e4d43
+    - bece7402-45a6-4d61-a414-02cbcdc4a804: bece7402-45a6-4d61-5beb-fd34323b57fb
+    - e7f6736e-d165-4a1b-a13e-2a8aea36d1c5: e7f6736e-d165-4a1b-5ec1-d57515c92e3a
+  Name: Trampoline
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> bece7402-45a6-4d61-a414-02cbcdc4a804
+    - !<own> 244e02c5-1488-4a6d-b4c3-a34bf79776f3
+  Components:
+    - !<own> 430f5f32-ddde-499c-866f-2d72700a90fe

@@ -1,0 +1,144 @@
+- !<AssetImportMetadata/3a1cd9e9-e4ad-40e6-a911-91bd3d9c1c2c>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 27d2994f-4805-4467-a073-3fae505462e1
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 27d2994f-4805-4467-a073-3fae505462e1
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> f57ca879-c388-4def-8c08-1b4bafaabb53
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/244e02c5-1488-4a6d-4b3c-5cb40868890c>
+  PrefabRemaps:
+    []
+  Name: Box 1
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 1.106936, z: -3.504765}
+    Rotation: {x: 34.348686, y: -0.000000, z: 0.000000}
+    Scale: {x: 10.000000, y: 6.401349, z: 5.108487}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4a9a1ebf-4a0f-4ff8-5dfb-5048bfe4c866
+- !<RenderMeshVisual/307f936a-cd70-4ec9-6dee-83ac001e5522>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> a38d55c9-ef7f-4af5-a2eb-f5032bc95f6c
+  Mesh: !<reference> 1bb09fec-e614-41ae-910b-8bd6500d332b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<RenderMeshVisual/4a9a1ebf-4a0f-4ff8-5dfb-5048bfe4c866>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 6609b76f-c136-4b28-909a-dd659df68501
+  Mesh: !<reference> 1bb09fec-e614-41ae-910b-8bd6500d332b
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/b720c647-05ac-4bea-8c7f-7758009cdc0e>
+  PrefabRemaps:
+    []
+  Name: Trampoline
+  Enabled: true
+  ScriptAsset: !<reference> bcbd5a70-64f8-44e2-8406-410cc6d4041d
+  ScriptInputsDefault:
+    recycleZ: true
+    depthZ: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      recycleZ: !<float> -20.000000
+      depthZ: !<float> 15.000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/bece7402-45a6-4d61-5beb-fd34323b57fb>
+  PrefabRemaps:
+    []
+  Name: Box
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 2.421253, z: 0.000000}
+    Rotation: {x: 34.228748, y: -0.000000, z: 0.000000}
+    Scale: {x: 10.000000, y: 0.897534, z: 10.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 307f936a-cd70-4ec9-6dee-83ac001e5522
+    - !<own> d5eaa260-f4ec-421a-aaba-4045ac8e4d43
+- !<ColliderComponent/d5eaa260-f4ec-421a-aaba-4045ac8e4d43>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Box>
+    FitVisual: true
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: true
+  ShowCollider: false
+- !<SceneObject/e7f6736e-d165-4a1b-5ec1-d57515c92e3a>
+  PrefabRemaps:
+    []
+  Name: Trampoline
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> bece7402-45a6-4d61-5beb-fd34323b57fb
+    - !<own> 244e02c5-1488-4a6d-4b3c-5cb40868890c
+  Components:
+    - !<own> b720c647-05ac-4bea-8c7f-7758009cdc0e
+- !<ObjectPrefabAssetData/f57ca879-c388-4def-8c08-1b4bafaabb53>
+  Prototype: !<ObjectOwner/aafc6719-c971-4bfd-beee-fc8910008167>
+    PackagePath: ""
+    objects:
+      - !<own> e7f6736e-d165-4a1b-5ec1-d57515c92e3a

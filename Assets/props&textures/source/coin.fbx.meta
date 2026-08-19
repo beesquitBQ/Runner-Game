@@ -1,0 +1,203 @@
+- !<AssetImportMetadata/29fd4fec-7ac4-410c-980a-308218ef28e4>
+  ImportedAssetIds:
+    .hidden/Material: !<reference> 86654a9e-682b-4fde-b066-b1aa629c481c
+    .hidden/white: !<reference> 3395b175-9be1-45a7-8e40-f8540b0bb2d5
+    13aafc23de563811: !<reference> a9d76b66-71c8-41c1-b7be-0bff57ddbd33
+    21d067a1e7b9c69a: !<reference> 29d4ac77-204d-4593-87f1-01487e2604fe
+    26ba073d67b9d0dd: !<reference> 0bd83e0a-2319-4dec-9c47-c96a7dbc6d20
+    5df95e6feff2e307: !<reference> 7b4aa4a6-ff47-4796-86ed-e1739ba31505
+    73cd4721c28a2c7f: !<reference> d54ff6eb-08c7-4c6f-9445-3cb7005b6868
+    Materials/Material: !<reference> 5929741f-71ba-45be-abb8-46c020c692ad
+    Materials/Material|Material|GraphPassInfo: !<reference> cf39142d-7fbe-44f2-b356-542b755575a3
+    Meshes/bitcoin: !<reference> 016e6517-a854-43c8-9d6c-e4fa13b646bf
+    Scene: !<reference> 49e08b14-c3c8-4fbe-a0b9-0688bb64d0b5
+    b1d6658d40dc1074: !<reference> 9b5d91a2-b5f2-49bd-8681-019bed54e6e6
+    ef3bf7f5521ae163: !<reference> 1e97cd6a-87dc-4d51-af2d-3d8d0eb5a8e9
+  ImporterName: FbxImporter
+  PrimaryAsset: !<reference> 49e08b14-c3c8-4fbe-a0b9-0688bb64d0b5
+  PackageType: LegacyPackage
+  LegacyPackagePolicy: CanBeUnpackedTransparent
+  ExtraData:
+    {}
+  AssetDataMap:
+    Scene: !<own> 4464718b-310f-4cd3-97c0-2229a22da4eb
+  DependentFiles:
+    []
+  ImporterSettings: !<FbxImporterSettings>
+    UseLegacyImporter: false
+    WithMaterials: true
+    NamingConvention: ByCategorySanitizeV2
+    PersistentIdGenerationAlgorithm: DescriptorBasedV2
+    AnimationCurveOptimization: true
+    CustomAnimationSamplingRate: 30.000000
+    ImportVertexColor: true
+    ImportTangentsAndBinormals: true
+    RegenerateTangentsAndBinormals: false
+    RegenerateNormalsForSkinnedMeshes: true
+    ImportBlendShapeAnimation: true
+    ImportVertexAnimation: true
+    GeneratePivots: true
+    TriangulateNURBS: true
+    UseLegacyFbxLoader: false
+  CompressionSettings: !<ComplexCompressionSettings>
+    Presets:
+      None Compression: !<FileCompressionSettings>
+        {}
+      Performance Compression: !<PerformanceCompressionSettings>
+        Level: Medium
+        Mipmap: false
+    ExtensionMappings:
+      mesh: None Compression
+      jpg: Performance Compression
+    Overrides:
+      {}
+- !<SceneObject/0bd83e0a-2319-4dec-63b8-3695824392df>
+  PrefabRemaps:
+    []
+  Name: coin
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 9b5d91a2-b5f2-49bd-797e-fe6412ab1919
+    - !<own> 1e97cd6a-87dc-4d51-50d2-c272f14a5716
+    - !<own> 7b4aa4a6-ff47-4796-7912-1e8c645ceafa
+  Components:
+    []
+- !<SceneObject/1e97cd6a-87dc-4d51-50d2-c272f14a5716>
+  PrefabRemaps:
+    []
+  Name: Sun
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -4.431303, y: 4.342516, z: -0.864411}
+    Rotation: {x: 173.919067, y: 1.582819, z: 26.188412}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 29d4ac77-204d-4593-780e-feb781d9fb01
+- !<LightSource/29d4ac77-204d-4593-780e-feb781d9fb01>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  renderLayer: 1
+  LightType: Directional
+  Intensity: 0.800000
+  ShadowDensity: 1.000000
+  ShadowBlurRadius: 0.000000
+  ShadowTextureSize: 512
+  AutoLightSourcePosition: false
+  AutoShadowFrustumSize: false
+  AutoShadowFrustumSizeExtend: 2.000000
+  ShadowFrustumSize: 30.000000
+  ShadowFrustumNearClipPlane: 1.000000
+  ShadowFrustumFarClipPlane: 1000.000000
+  UseEnvMapFromCamera: false
+  EnvMapFromCameraMode: Auto
+  EstimationSharpness: 1.000000
+  EnvMapExposure: 1.000000
+  EnvMapRotation: 0.000000
+  DiffuseEnvTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  SpecularEnvTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+  DynamicEnvInputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  InnerConeAngle: 0.000000
+  OuterConeAngle: 1.000000
+  FalloffType: None
+  FalloffRange: .inf
+  ShadowType: None
+- !<ObjectPrefabAssetData/4464718b-310f-4cd3-97c0-2229a22da4eb>
+  Prototype: !<ObjectOwner/129b7c78-89a1-4699-846f-35af3ef8fe72>
+    PackagePath: ""
+    objects:
+      - !<own> 0bd83e0a-2319-4dec-63b8-3695824392df
+- !<SceneObject/7b4aa4a6-ff47-4796-7912-1e8c645ceafa>
+  PrefabRemaps:
+    []
+  Name: Camera
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.207728, y: 0.601538, z: 0.467598}
+    Rotation: {x: -55.923130, y: -36.583576, z: 70.042747}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d54ff6eb-08c7-4c6f-6bba-c348ffa49797
+- !<SceneObject/9b5d91a2-b5f2-49bd-797e-fe6412ab1919>
+  PrefabRemaps:
+    []
+  Name: bitcoin
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: -90.000000, y: -0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a9d76b66-71c8-41c1-4841-f400a82242cc
+- !<RenderMeshVisual/a9d76b66-71c8-41c1-4841-f400a82242cc>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 5929741f-71ba-45be-abb8-46c020c692ad
+  Mesh: !<reference> 016e6517-a854-43c8-9d6c-e4fa13b646bf
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<Camera/d54ff6eb-08c7-4c6f-6bba-c348ffa49797>
+  PrefabRemaps:
+    []
+  Name: component_2
+  Enabled: true
+  renderLayer: 1
+  MipmapLevel: 0
+  RenderOrder: 0
+  Size: 20.000000
+  Near: 0.100000
+  Far: 99.999992
+  Fov: 98.268684
+  ClearColor: !<CameraClearColor>
+    Mode: None
+    Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  ClearDepth: !<CameraClearDepth>
+    Mode: None
+    Value: 1.000000
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Aspect: 1.000000
+  CameraType: Perspective
+  DepthMode: Regular
+  DeviceProperty: All
+  AspectPreset: Custom
+  OitLayers: NoOit
+  RenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
+  DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
+  MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+  DevicePropertiesSource: !<reference> 00000000-0000-0000-0000-000000000000

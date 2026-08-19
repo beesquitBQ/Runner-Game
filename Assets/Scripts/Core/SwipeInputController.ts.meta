@@ -1,0 +1,49 @@
+- !<AssetImportMetadata/40f9545b-0550-42e4-9cf2-2371eb6bde26>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2fc9447e-302f-4ae1-b9be-ef679ce34a95
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2fc9447e-302f-4ae1-b9be-ef679ce34a95
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 88c76891-638d-4a96-a2eb-e13ecdaeb220
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/88c76891-638d-4a96-a2eb-e13ecdaeb220>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 339940bb-7d53-400b-9d0d-4086449aebcf
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    invertHorizontal: false
+    swipeThreshold: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - swipeThreshold: 0.060000
+      invertHorizontal: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input float swipeThreshold = 0.05
+    - // @input bool invertHorizontal = true
