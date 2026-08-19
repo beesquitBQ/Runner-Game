@@ -276,7 +276,7 @@
     - 87aae15a-16b0-4623-a6e0-90ac97dbab11: 18c4896d-b492-41b9-97a3-45a6da221856
     - dbb76dce-9a79-4011-8ad1-1ed2fea3dde7: 6f5c3790-bf5d-472d-762e-d191bb1d2e60
   Name: LargeObstacle 1
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -296,7 +296,7 @@
     - 6ea2b90a-67ff-4df6-9dae-bdb2b839cc2c: 5cded155-d5ea-4552-a9b3-4b6bf51c2514
     - 89d4f358-ee9a-48f9-8072-dbc0e3836dfe: cefa1822-2641-4409-7a3e-52a8cc235676
   Name: SmallObstacle 8
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -618,7 +618,7 @@
     - 97e4627a-268b-4eaa-a63d-afa0cf792759: cefa1822-2641-4409-7a3e-52a8cc235676
     - d2514531-f9f8-4580-adb8-65b926bdfbe6: 035a4d50-fc85-443a-6c76-b04a81016bff
   Name: SmallObstacle 5
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -768,7 +768,7 @@
     - 6403bce8-045a-42f0-8f4e-889ca08922a6: 5cded155-d5ea-4552-a9b3-4b6bf51c2514
     - 7f5b44e8-d044-4336-b1a8-9940fa01e69a: 0afee45c-c205-4eeb-4449-c144760fe978
   Name: SmallObstacle 3
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -797,7 +797,7 @@
   RotationTension: 30.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<ScreenTransform/150e5ba5-03e0-4efe-89e7-4f84af4dd9a4>
   PrefabRemaps:
     []
@@ -1225,7 +1225,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<ScriptComponent/20ad48ce-6384-4e97-87a0-ae6d81861a7a>
   PrefabRemaps:
     []
@@ -1429,7 +1429,7 @@
     - efb0f380-9824-4f4b-88d8-ac8bc323d0dd: 19a71a85-b754-4600-4bbc-12e612910cf6
     - f2220c53-0b90-4459-9843-7d4df6cf8e7c: e2d7e5bd-8f44-4761-5298-b5ce75d9881b
   Name: Coin
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1523,7 +1523,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<ScriptComponent/2f72e825-bc55-47fb-a2eb-fc94647e633e>
   PrefabRemaps:
     []
@@ -1654,7 +1654,7 @@
     - bd7478d5-5691-4c9a-8b85-9ec2ec7df700: 0afee45c-c205-4eeb-4449-c144760fe978
     - f153ef8b-5171-44b4-883a-a0fc87ac2fed: cefa1822-2641-4409-7a3e-52a8cc235676
   Name: SmallObstacle 7
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1774,7 +1774,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<ScriptComponent/357ec25f-e9d1-4659-aca6-51793665da36>
   PrefabRemaps:
     []
@@ -1861,7 +1861,7 @@
     - d027cc6b-0969-45ea-82de-ee5ec79c34b3: 33ccfeb9-70e2-41e3-9e5d-d1fc53274386
     - fdf4b104-417e-46b6-b684-2202d3d553c8: 781639c8-e121-477b-6c1a-f26f5508c860
   Name: LargeObstacle
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2225,7 +2225,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<SceneObject/487fa0c6-de0c-49d1-913c-762a8c310602>
   PrefabRemaps:
     - 1c323b5e-596b-410c-b591-d93be35ac28c: 1d8a8919-3a35-4c1a-bdbf-3e4f1a984276
@@ -3120,7 +3120,7 @@
     - a369f5a0-0e38-42df-ae9c-977982628df2: 5cded155-d5ea-4552-a9b3-4b6bf51c2514
     - c9e50017-2ffe-4770-a58b-e4ad2c5f1051: 0afee45c-c205-4eeb-4449-c144760fe978
   Name: SmallObstacle
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3203,7 +3203,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<RenderMeshVisual/622888e1-2e7e-4ad3-bc67-896a6db38f4c>
   PrefabRemaps:
     []
@@ -3401,7 +3401,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<SceneObject/66d37652-404c-41df-be58-fa33279f7142>
   PrefabRemaps:
     []
@@ -3482,7 +3482,7 @@
     - a489028f-3cdd-4001-992f-62b8dc60c4a5: cefa1822-2641-4409-7a3e-52a8cc235676
     - b9c3c35c-fb17-403f-986f-82c28b03ddb2: 035a4d50-fc85-443a-6c76-b04a81016bff
   Name: SmallObstacle 1
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -4413,7 +4413,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<SceneObject/8e5c6216-4c26-479f-935a-4a2bc698b280>
   PrefabRemaps:
     - 6c658f0d-bd28-49bb-a6fe-54293d07cc3a: 781639c8-e121-477b-6c1a-f26f5508c860
@@ -4878,7 +4878,7 @@
     - be1b26c5-2329-4e7f-b4d0-599d7a3a0862: 5cded155-d5ea-4552-a9b3-4b6bf51c2514
     - ec7d1476-06ac-4901-bdc7-5a506906bc65: 035a4d50-fc85-443a-6c76-b04a81016bff
   Name: SmallObstacle 9
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -5288,7 +5288,7 @@
     - ad30bae4-3465-41b4-9dd4-33e28e182b5f: bf51e68d-22c6-4613-46f0-8d0d0b605c6c
     - db63c125-ae27-44dd-a0d3-c1e4a21c856a: 0afee45c-c205-4eeb-4449-c144760fe978
   Name: SmallObstacle 4
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -5532,7 +5532,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<SceneObject/ba800113-d688-45b7-8a1b-6aa60e95e5a6>
   PrefabRemaps:
     []
@@ -5567,7 +5567,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<ScriptComponent/bc66e8b9-9f61-45a0-98f5-d8f1ab591ee6>
   PrefabRemaps:
     []
@@ -5812,7 +5812,7 @@
     - c733307e-6d1a-409e-a1cb-05cc4f2a664e: cefa1822-2641-4409-7a3e-52a8cc235676
     - f60e5398-0631-4953-b51d-eea4d9e4cf51: 5cded155-d5ea-4552-a9b3-4b6bf51c2514
   Name: SmallObstacle 2
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -6162,7 +6162,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<ScriptComponent/d255cb69-5aa6-4629-be79-6757e6d277c2>
   PrefabRemaps:
     []
@@ -6728,7 +6728,7 @@
     - 79b521e3-5fbb-46a8-9b12-318868ce9f45: 0afee45c-c205-4eeb-4449-c144760fe978
     - e5d2b74d-9375-4f13-b0ff-9af40e857013: bf51e68d-22c6-4613-46f0-8d0d0b605c6c
   Name: SmallObstacle 6
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -6942,7 +6942,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<ColliderComponent/ec7d1476-06ac-4901-bdc7-5a506906bc65>
   PrefabRemaps:
     []
@@ -6961,7 +6961,7 @@
   RotationTension: 0.000000
   ForceCompound: false
   Intangible: true
-  ShowCollider: true
+  ShowCollider: false
 - !<SceneObject/ecb6888c-25e7-447b-9c97-704e0317aff5>
   PrefabRemaps:
     []
@@ -7129,7 +7129,7 @@
     - ecb6888c-25e7-447b-9c97-704e0317aff5: 0afee45c-c205-4eeb-4449-c144760fe978
     - f0660da7-b7aa-4d23-b538-b4091ded6ffb: bf51e68d-22c6-4613-46f0-8d0d0b605c6c
   Name: SmallObstacle 11
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -7518,7 +7518,7 @@
     - c9c92a4f-c6ad-4e9b-82d7-cea0fb50e134: 5cded155-d5ea-4552-a9b3-4b6bf51c2514
     - ffdd8f16-354a-4db2-8701-de7ebebb848c: bf51e68d-22c6-4613-46f0-8d0d0b605c6c
   Name: SmallObstacle 10
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}

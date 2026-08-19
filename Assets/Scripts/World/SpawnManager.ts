@@ -1,59 +1,58 @@
-// SpawnManager.ts
 import { ObjectPool } from "../Utils/ObjectPool";
 import { Obstacle } from "./Obstacle";
 import { Coin } from "./Coin";
 import { Trampoline } from "./Trampoline";
 import { DEFAULT_DIFFICULTY, DifficultyConfig, ObstacleKind, LANE_COUNT } from "../Core/GameConfig";
 
-// Символы паттернов:
-// E: Пусто (Empty)
-// C: Монетка (Coin)
-// S: Маленькое препятствие (Small)
-// L: Большое препятствие (Large)
-// T: Трамплин (Trampoline)
-// ?: Рандом (50% монетка / 50% пустота)
-// R: Рандом (Маленькое препятствие / Монетка / Пустота)
+// Позначення в шаблонах:
+// E: Порожньо
+// C: Монета
+// S: Мала перешкода
+// L: Велика перешкода
+// T: Батут
+// ?: Випадково (50% монета / 50% порожньо)
+// R: Випадково (Мала перешкода / Монета / Порожньо)
 
 type RowData = [string, string, string];
 type PatternData = RowData[];
 
 const PATTERNS: PatternData[] = [
-  // 1. Прямая линия монет с препятствиями по бокам
+  // 1. Пряма лінія монет з бар'єрами по боках
   [
     ["S", "C", "S"],
     ["S", "C", "S"],
     ["E", "C", "E"]
   ],
 
-  // 2. Шахматный порядок (требует быстрой смены полос)
+  // 2. Шаховий порядок
   [
     ["S", "C", "E"],
     ["E", "S", "C"],
     ["C", "E", "S"]
   ],
 
-  // 3. Трамплин перед большой стеной
+  // 3. Батут перед великою стіною
   [
     ["E", "T", "E"],
     ["?", "L", "?"],
     ["C", "E", "C"]
   ],
 
-  // 4. Трамплин с переходом на крышу
+  // 4. Батут із переходом на перешкоду
   [
     ["T", "S", "E"],
     ["L", "C", "C"],
     ["E", "E", "R"]
   ],
 
-  // 5. Диагональный барьер
+  // 5. Діагональний бар'єр
   [
     ["S", "E", "E"],
     ["E", "S", "E"],
     ["E", "E", "S"]
   ],
 
-  // 6. Зигзаг из монет (безопасный путь)
+  // 6. Зигзаг із монет
   [
     ["C", "S", "S"],
     ["S", "C", "S"],
@@ -62,14 +61,14 @@ const PATTERNS: PatternData[] = [
     ["C", "S", "S"]
   ],
 
-  // 7. Блокада с одним проходом
+  // 7. Блокада з одним проходом
   [
     ["S", "S", "E"],
     ["R", "C", "R"],
     ["E", "S", "S"]
   ],
 
-  // 8. Двойная дорожка монет
+  // 8. Подвійна доріжка монет
   [
     ["C", "E", "C"],
     ["C", "S", "C"],
@@ -84,9 +83,9 @@ export class SpawnManager extends BaseScriptComponent {
   @input coins!: Coin[];
   @input trampolines!: Trampoline[];
 
-  @input spawnZ: number = 220; // Точка появления впереди камеры
-  @input laneWidth: number = 20; // Расстояние между линиями
-  @input rowDistance: number = 30; // Фиксированная дистанция между рядами
+  @input spawnZ: number = 220;    // Дистанція спавну попереду камери
+  @input laneWidth: number = 20;  // Відстань між центрами смуг
+  @input rowDistance: number = 30; // Відстань між рядами
 
   private smallPool!: ObjectPool<Obstacle>;
   private largePool!: ObjectPool<Obstacle>;
@@ -114,7 +113,7 @@ export class SpawnManager extends BaseScriptComponent {
 
   startGame(): void {
     this.currentSpeed = this.config.baseSpeed;
-    this.distanceAccumulator = this.rowDistance; // Мгновенный спавн первого ряда
+    this.distanceAccumulator = this.rowDistance;
     this.isRunning = true;
     this.loadNextPattern();
   }
@@ -131,13 +130,12 @@ export class SpawnManager extends BaseScriptComponent {
     this.distanceAccumulator = 0;
   }
 
-getCurrentSpeed(): number {
-  if (!this.isRunning) return 0;
-  const player = (global as any).playerController;
-  // Если игрок летит на трамплине - разгоняем мир в 1.8x раз
-  const multiplier = (player && player.isBoosted()) ? 1.8 : 1.0;
-  return this.currentSpeed * multiplier;
-}
+  getCurrentSpeed(): number {
+    if (!this.isRunning) return 0;
+    const player = (global as any).playerController;
+    const multiplier = (player && player.isBoosted()) ? 1.8 : 1.0;
+    return this.currentSpeed * multiplier;
+  }
 
   recycleObstacle(obs: Obstacle): void {
     if (obs.getKind() === ObstacleKind.Large) {
@@ -160,17 +158,14 @@ getCurrentSpeed(): number {
 
     const dt = getDeltaTime();
 
-    // Плавный разгон мира до максимальной скорости
     this.currentSpeed = Math.min(
       this.config.maxSpeed,
       this.currentSpeed + this.config.speedGainPerSecond * dt
     );
 
-    // Подсчет пройденной дистанции
     const stepDistance = this.currentSpeed * dt;
     this.distanceAccumulator += stepDistance;
 
-    // Спавним ряды строго каждые rowDistance единиц
     while (this.distanceAccumulator >= this.rowDistance) {
       this.distanceAccumulator -= this.rowDistance;
       this.spawnNextRow();
@@ -194,7 +189,6 @@ getCurrentSpeed(): number {
       let type = row[lane];
       let item: (BaseScriptComponent & { getTransform: () => Transform }) | null = null;
 
-      // Обработка вероятностей
       if (type === "?") {
         type = Math.random() > 0.5 ? "C" : "E";
       } else if (type === "R") {
@@ -204,7 +198,6 @@ getCurrentSpeed(): number {
         else type = "E";
       }
 
-      // Выдача объекта из нужного пула
       if (type === "C") item = this.coinPool.spawn();
       else if (type === "S") item = this.smallPool.spawn();
       else if (type === "L") item = this.largePool.spawn();

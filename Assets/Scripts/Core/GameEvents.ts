@@ -1,7 +1,4 @@
-// GameEvents.ts
-// Лёгкая шина событий (pub/sub), не завязанная на конкретные SceneObject.
-// Используется, чтобы Obstacle/Coin/Trampoline могли сообщать GameManager
-// о столкновениях/сборе монет, не имея прямой ссылки друг на друга.
+// Легка шина подій (pub/sub) для зв'язку між компонентами без прямих залежностей.
 
 type Handler<T> = (payload: T) => void;
 
@@ -26,7 +23,7 @@ class EventBus {
   emit<T>(event: string, payload?: T): void {
     const arr = this.listeners.get(event);
     if (!arr) return;
-    // копия массива на случай, если обработчик сам подписывается/отписывается
+    // Копія масиву на випадок зміни підписок під час виконання обробника
     for (const h of [...arr]) {
       h(payload as T);
     }

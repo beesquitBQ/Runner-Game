@@ -1,4 +1,3 @@
-// Coin.ts
 import { Poolable } from "../Utils/ObjectPool";
 import { GameEvents, EVENTS } from "../Core/GameEvents";
 
@@ -6,7 +5,7 @@ import { GameEvents, EVENTS } from "../Core/GameEvents";
 export class Coin extends BaseScriptComponent implements Poolable {
   @input visuals?: SceneObject;
   @input recycleZ: number = -40;
-  @input laneIndex: number = 1; // 0, 1, 2
+  @input laneIndex: number = 1;
 
   private collected: boolean = false;
 
@@ -36,7 +35,7 @@ export class Coin extends BaseScriptComponent implements Poolable {
     pos.z -= sm.getCurrentSpeed() * dt;
     t.setLocalPosition(pos);
 
-    // Гарантированная проверка сбора монеты
+    // Перевірка збору монети гравцем
     if (!this.collected) {
       const player = (global as any).playerController;
       if (player) {
@@ -44,7 +43,6 @@ export class Coin extends BaseScriptComponent implements Poolable {
         const distZ = Math.abs(pos.z - playerPos.z);
         const distX = Math.abs(pos.x - playerPos.x);
 
-        // Если монета на одной линии с игроком и по Z находится рядом
         if (distX < 12 && distZ < 15) {
           this.collect();
         }

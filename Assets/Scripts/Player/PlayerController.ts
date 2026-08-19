@@ -1,4 +1,3 @@
-// PlayerController.ts
 import { PlayerAnimationController } from "./PlayerAnimationController";
 import { LANE_COUNT } from "../Core/GameConfig";
 
@@ -9,18 +8,18 @@ export class PlayerController extends BaseScriptComponent {
   @input laneSmoothness: number = 10;
   @input tiltAngle: number = 8;
 
-  // УЛУЧШЕННЫЙ ПРЫЖОК
-  @input jumpHeight: number = 30;              // Оптимальная высота прыжка
-  @input jumpDuration: number = 0.68;          // Более длинная дуга полета
-  @input jumpForwardDistance: number = 20;     // Динамический выпад вперед в прыжке
+  // Звичайний стрибок
+  @input jumpHeight: number = 30;
+  @input jumpDuration: number = 0.68;
+  @input jumpForwardDistance: number = 20;
 
-  // СУПЕР-ПРЫЖОК (ТРАМПЛИН)
+  // Супер-стрибок (батут)
   @input boostedJumpHeight: number = 65;
   @input boostedJumpDuration: number = 1.35;
   @input boostedForwardDistance: number = 40;
 
-  // НЕУЯЗВИМОСТЬ И БУФЕР ПРИЗЕМЛЕНИЯ
-  @input landingGraceDuration: number = 0.35;  // Неуязвимость после приземления
+  // Невразливість
+  @input landingGraceDuration: number = 0.35;
   @input invulnerabilityDuration: number = 1.2;
   @input characterVisualMesh?: SceneObject;
 
@@ -144,7 +143,6 @@ export class PlayerController extends BaseScriptComponent {
   }
 
   getIsInvulnerable(): boolean {
-    // Неуязвимость: при уроне ИЛИ на трамплине ИЛИ доли секунды после приземления
     return this.invulnerable || this.boosted || this.landingGraceTimer > 0;
   }
 
@@ -198,7 +196,7 @@ export class PlayerController extends BaseScriptComponent {
     const t = this.getTransform();
     const pos = t.getLocalPosition();
 
-    // 1. Смена полосы с креном
+    // 1. Зміна смуги з нахилом корпусу
     if (!this.dead) {
       const prevX = pos.x;
       pos.x = MathUtils.lerp(pos.x, this.targetX, 1 - Math.exp(-this.laneSmoothness * dt));
@@ -209,15 +207,12 @@ export class PlayerController extends BaseScriptComponent {
       t.setLocalRotation(quat.fromEulerVec(new vec3(0, 0, tiltRad)));
     }
 
-    // 2. Логика прыжка с вылетом вперед и мягким приземлением
+    // 2. Логіка траєкторії стрибка
     if (this.airborne) {
       this.jumpElapsed += dt;
       const progress = Math.min(this.jumpElapsed / this.activeJumpDuration, 1);
 
-      // Парабола высоты
       pos.y = this.currentFloorY + Math.sin(Math.PI * progress) * this.activeJumpHeight;
-
-      // Динамический вынос корпуса вперед по Z
       pos.z = this.baseZ + Math.sin(Math.PI * progress) * this.activeForwardDist;
 
       if (progress >= 1) {
@@ -225,8 +220,6 @@ export class PlayerController extends BaseScriptComponent {
         this.boosted = false;
         pos.y = this.currentFloorY;
         pos.z = this.baseZ;
-
-        // ВКЛЮЧАЕМ БУФЕР НЕУЯЗВИМОСТИ ПРИ ПРИЗЕМЛЕНИИ
         this.landingGraceTimer = this.landingGraceDuration;
       }
     } else if (!this.dead) {
@@ -236,12 +229,11 @@ export class PlayerController extends BaseScriptComponent {
 
     t.setLocalPosition(pos);
 
-    // 3. Таймер буфера приземления
     if (this.landingGraceTimer > 0) {
       this.landingGraceTimer -= dt;
     }
 
-    // 4. Мигание при обычном уроне
+    // 3. Миготіння моделі під час невразливості
     if (this.invulnerable) {
       this.invulnTimer += dt;
       if (this.characterVisualMesh) {

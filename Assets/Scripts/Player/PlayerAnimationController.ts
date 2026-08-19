@@ -1,4 +1,3 @@
-// PlayerAnimationController.ts
 @component
 export class PlayerAnimationController extends BaseScriptComponent {
   @input targetAnimationComponent?: Component;
@@ -49,7 +48,7 @@ export class PlayerAnimationController extends BaseScriptComponent {
     }
   }
 
-  // Принудительное и чистое переключение анимаций с обнулением весов старых клипов
+  // Примусове перемикання анімацій зі скиданням ваги (weights) інших кліпів
   private forcePlayClip(targetClipName: string, loop: boolean = true): void {
     if (!this.animPlayer) {
       this.setupAnimationPlayer();
@@ -60,7 +59,6 @@ export class PlayerAnimationController extends BaseScriptComponent {
     let played = false;
 
     try {
-      // 1. Способ через массив clips в AnimationPlayer (Lens Studio v5)
       const clipsList = this.animPlayer.getClips ? this.animPlayer.getClips() : this.animPlayer.clips;
 
       if (clipsList && clipsList.length > 0) {
@@ -72,7 +70,6 @@ export class PlayerAnimationController extends BaseScriptComponent {
           const isTarget = clipName === lowerTarget || clipName.includes(lowerTarget);
 
           if (isTarget) {
-            // Включаем целевую анимацию на 100% веса с первого кадра
             if (typeof clip.weight !== "undefined") clip.weight = 1.0;
             if (typeof clip.time !== "undefined") clip.time = 0;
             if (typeof clip.play === "function") {
@@ -80,7 +77,6 @@ export class PlayerAnimationController extends BaseScriptComponent {
             }
             played = true;
           } else {
-            // Принудительно глушим и сбрасываем все чужие анимации (особенно DeadLoop)
             if (typeof clip.weight !== "undefined") clip.weight = 0.0;
             if (typeof clip.stop === "function") {
               clip.stop();
@@ -89,14 +85,13 @@ export class PlayerAnimationController extends BaseScriptComponent {
         }
       }
 
-      // 2. Дополнительный вызов нативного playClip для синхронизации
       if (typeof this.animPlayer.playClip === "function") {
         this.animPlayer.playClip(targetClipName);
       } else if (typeof this.animPlayer.playClipByName === "function") {
         this.animPlayer.playClipByName(targetClipName, 0);
       }
     } catch (err) {
-      print(`[PlayerAnimationController] Ошибка переключения на '${targetClipName}': ${err}`);
+      print(`[PlayerAnimationController] Помилка перемикання на '${targetClipName}': ${err}`);
     }
   }
 
@@ -121,7 +116,6 @@ export class PlayerAnimationController extends BaseScriptComponent {
     this.forcePlayClip(this.deathClipName, false);
 
     this.runDelayed(this.deathAnimDuration, () => {
-      // Переключаем вес на лежачую позу
       this.forcePlayClip(this.deadLoopClipName, true);
       onFinish();
     });
@@ -129,7 +123,6 @@ export class PlayerAnimationController extends BaseScriptComponent {
 
   playGetup(onFinish: () => void): void {
     this.clearTimer();
-    // Принудительно выключаем DeadLoop и включаем Getup
     this.forcePlayClip(this.getupClipName, false);
 
     this.runDelayed(this.getupAnimDuration, () => {

@@ -1,4 +1,3 @@
-// GameManager.ts
 import { GameState, START_LIVES } from "./GameConfig";
 import { GameEvents, EVENTS } from "./GameEvents";
 
@@ -11,11 +10,10 @@ export class GameManager extends BaseScriptComponent {
   @input gameOverUI?: SceneObject;
   @input tapToStartUI?: SceneObject;
 
-  // ЗВУКИ И МУЗЫКА (AudioComponent)
-  @input bgmAudio?: AudioComponent;        // Фоновая музыка (зацикленная)
-  @input coinAudio?: AudioComponent;       // Звук сбора монетки
-  @input hitAudio?: AudioComponent;        // Звук получения урона
-  @input gameOverAudio?: AudioComponent;   // Звук поражения
+  @input bgmAudio?: AudioComponent;
+  @input coinAudio?: AudioComponent;
+  @input hitAudio?: AudioComponent;
+  @input gameOverAudio?: AudioComponent;
 
   private state: GameState = GameState.Idle;
   private score: number = 0;
@@ -86,7 +84,6 @@ export class GameManager extends BaseScriptComponent {
     if (this.gameOverUI) this.gameOverUI.enabled = false;
     if (this.tapToStartUI) this.tapToStartUI.enabled = false;
 
-    // Включаем фоновую музыку
     this.playSound(this.bgmAudio, true);
 
     (global as any).playerController?.startRunning();
@@ -120,9 +117,7 @@ export class GameManager extends BaseScriptComponent {
     this.coins += 1;
     this.score += 5;
 
-    // Звук звона монетки
     this.playSound(this.coinAudio, false);
-
     this.updateUI();
   }
 
@@ -133,7 +128,6 @@ export class GameManager extends BaseScriptComponent {
     this.comboCount = 0;
     this.updateUI();
 
-    // Звук удара
     this.playSound(this.hitAudio, false);
 
     if (this.lives <= 0) {
@@ -147,7 +141,6 @@ export class GameManager extends BaseScriptComponent {
     this.state = GameState.Dying;
     (global as any).spawnManager?.stopGame();
 
-    // Останавливаем музыку и играем поражение
     this.stopSound(this.bgmAudio);
     this.playSound(this.gameOverAudio, false);
 

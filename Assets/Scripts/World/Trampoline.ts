@@ -1,4 +1,3 @@
-// Trampoline.ts
 import { Poolable } from "../Utils/ObjectPool";
 
 @component
@@ -23,7 +22,7 @@ export class Trampoline extends BaseScriptComponent implements Poolable {
     pos.z -= sm.getCurrentSpeed() * dt;
     t.setLocalPosition(pos);
 
-    // Координатная проверка наступания на трамплин
+    // Перевірка наступання на батут
     if (!this.triggered) {
       const player = (global as any).playerController;
       if (player) {
@@ -33,7 +32,6 @@ export class Trampoline extends BaseScriptComponent implements Poolable {
 
         if (distX < 12 && distZ < this.depthZ) {
           this.triggered = true;
-          // Активируем мощный высокий прыжок
           player.jump(true);
         }
       }

@@ -1,8 +1,7 @@
-// SwipeInputController.ts
 @component
 export class SwipeInputController extends BaseScriptComponent {
   @input swipeThreshold: number = 0.05;
-  @input invertHorizontal: boolean = true; // Отзеркаливание свайпов влево/вправо
+  @input invertHorizontal: boolean = true; // Інверсія горизонтальних свайпів (ліворуч/праворуч)
 
   private startPos: vec2 | null = null;
   private isSwiping: boolean = false;

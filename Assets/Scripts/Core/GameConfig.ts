@@ -1,25 +1,24 @@
-// GameConfig.ts
-// Общие константы, енумы и конфиг сложности для всего проекта.
+// Загальні константи, переліки (enums) та конфігурація складності гри.
 
 export enum GameState {
-  Idle = "Idle",       // до старта — играет idle-анимация, ждём тап по экрану
-  Playing = "Playing", // активный забег
-  Dying = "Dying",     // проигрывается анимация смерти + подъём
-  GameOver = "GameOver", // показан экран Game Over, ждём тап для рестарта
+  Idle = "Idle",         // До старту — очікування тапу
+  Playing = "Playing",   // Активний забіг
+  Dying = "Dying",       // Анімація смерті або підйому
+  GameOver = "GameOver", // Екран завершення гри
 }
 
 export enum ObstacleKind {
-  Small = "Small", // можно перепрыгнуть обычным прыжком
-  Large = "Large", // можно только обойти (сменить полосу) либо перелететь на трамплине
+  Small = "Small", // Можна перестрибнути звичайним стрибком
+  Large = "Large", // Можна лише обійти або перелетіти через батут
 }
 
 export interface DifficultyConfig {
-  baseSpeed: number;                 // стартовая скорость мира (см/сек)
-  maxSpeed: number;                  // потолок скорости
-  speedGainPerSecond: number;        // на сколько растёт скорость каждую секунду забега
-  baseSpawnInterval: number;         // стартовый интервал между рядами препятствий (сек)
-  minSpawnInterval: number;          // минимальный интервал (нижний предел сложности)
-  spawnIntervalDecayPerSecond: number; // на сколько уменьшается интервал каждую секунду
+  baseSpeed: number;                   // Початкова швидкість світу (см/с)
+  maxSpeed: number;                    // Максимальна швидкість
+  speedGainPerSecond: number;          // Приріст швидкості за секунду
+  baseSpawnInterval: number;           // Початковий інтервал спавну (с)
+  minSpawnInterval: number;            // Мінімальний ліміт інтервалу спавну (с)
+  spawnIntervalDecayPerSecond: number; // Зменшення інтервалу за секунду
 }
 
 export const DEFAULT_DIFFICULTY: DifficultyConfig = {

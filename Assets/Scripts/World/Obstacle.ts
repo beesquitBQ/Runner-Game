@@ -1,4 +1,3 @@
-// Obstacle.ts
 import { ObstacleKind } from "../Core/GameConfig";
 import { Poolable } from "../Utils/ObjectPool";
 import { GameEvents, EVENTS } from "../Core/GameEvents";
@@ -42,18 +41,17 @@ export class Obstacle extends BaseScriptComponent implements Poolable {
         const isSmall = this.getKind() === ObstacleKind.Small;
 
         if (isSmall) {
-          // Более лояльный порог прыжка: достаточно преодолеть 45% высоты препятствия
           const clearThreshold = this.obstacleHeight * 0.45;
           const playerRelativeY = playerPos.y - player.getFloorHeight();
 
           if (player.isAirborne() && playerRelativeY >= clearThreshold) {
-            // Успешно перепрыгнул
+            // Успішно перестрибнуто
           } else if (!this.triggered && !player.getIsInvulnerable()) {
             this.triggered = true;
             GameEvents.emit(EVENTS.PLAYER_HIT_SMALL, this);
           }
         } else {
-          // Большое препятствие
+          // Велика перешкода: підйом рівня підлоги або зіткнення
           if (playerPos.y >= this.obstacleHeight - 3) {
             if (!this.isPlayerOnTop) {
               this.isPlayerOnTop = true;
